@@ -1,0 +1,13 @@
+{
+  "builds": [
+    {
+      "src": "requirements.txt",
+      "use": "@railway/python"
+    },
+    {
+      "src": ".",
+      "use": "@railway/commands",
+      "cmd": "playwright install"
+    }
+  ]
+}
