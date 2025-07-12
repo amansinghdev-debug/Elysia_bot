@@ -1,4 +1,11 @@
 from package import *
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+Bot_token = os.getenv("Telegram_token")
+if not Bot_token:
+    raise ValueError("Telegram token is not set in the environment variables.")
 
 def main():
     app = ApplicationBuilder().token(Bot_token).build()
