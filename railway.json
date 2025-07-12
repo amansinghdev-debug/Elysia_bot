@@ -7,7 +7,7 @@
     {
       "src": ".",
       "use": "@railway/commands",
-      "cmd": "playwright install"
+      "cmd": "playwright install chromium"
     }
   ]
 }
