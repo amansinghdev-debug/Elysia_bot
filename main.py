@@ -4,7 +4,6 @@ from playwright.async_api import async_playwright
 import asyncio
 import requests
 import tempfile
-from .instragram import reel, reel_sync
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -53,14 +52,11 @@ async def reel(url: str) -> str:
 def reel_sync(url: str) -> str:
     return asyncio.run(reel(url))
 
-
-
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
-        "Hello! I am Elysia, your telebot . How can I assist you today?"
+        "Hello! I am Elysia, please share your instragram reel link?"
     )
     
-
 async def help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
         "Available commands:\n"
@@ -71,8 +67,7 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
-        "This is Elysia, a telebot designed to assist you with various tasks. "
-        "Feel free to ask me anything!"
+        "This is Elysia, a telebot designed to download insta reel"
     )
 
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
