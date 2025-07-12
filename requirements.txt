@@ -1,5 +1,5 @@
-pip                 25.1.1
-playwright          1.53.0
-python-dotenv       1.1.1
-python-telegram-bot 22.2
-requests            2.32.4
+pip
+playwright
+python-dotenv
+python-telegram-bot
+requests
