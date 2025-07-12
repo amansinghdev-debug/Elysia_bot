@@ -49,8 +49,8 @@ async def reel(url: str) -> str:
         return download_url
     
 # ✅ WRAPPER
-def reel_sync(url: str) -> str:
-    return asyncio.run(reel(url))
+# def reel_sync(url: str) -> str:
+#     return asyncio.run(reel(url))
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
@@ -82,7 +82,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("getting your link...Please wait at least 1 min !")
 
     # ✅ Run in separate thread
-    video_url = await asyncio.to_thread(reel_sync, text)
+    video_url = await reel(text)
     await update.message.reply_text("your reel is ready, downloading...")
         
     if not video_url:
