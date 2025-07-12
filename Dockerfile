@@ -26,9 +26,9 @@ RUN apt-get update && apt-get install -y \
     libx11-6 \
     libexpat1 \
     libatspi2.0-0 \
-    libgio-2.0-0 \
     --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
+
 
 # Set working directory
 WORKDIR /app
