@@ -1,6 +1,8 @@
 # Python
-__pycache__/
-*.package
+package/
+__init__.py
+instragram.py
+telebot.py
 
 # Virtual environment
 .venv/
