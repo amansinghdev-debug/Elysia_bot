@@ -5,12 +5,6 @@ import requests
 import tempfile
 from .instragram import reel, reel_sync
 import os
-from dotenv import load_dotenv
-load_dotenv()
-
-Bot_token = os.getenv("Telegram_token")
-if not Bot_token:
-    raise ValueError("Telegram token is not set in the environment variables.")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
