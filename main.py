@@ -73,7 +73,7 @@ async def about(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
 
-    if "instagram.com/reel/" not in text:
+    if "instagram.com/" not in text:
         await update.message.reply_text(
             "Please provide a valid Instagram link."
         )
